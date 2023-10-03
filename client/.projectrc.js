@@ -1,14 +1,12 @@
 import React from 'react';
 import Home from './pages/Home';
+import Override from './pages/Override';
 
 export default {
   logo: {             
     img: void 0,      
     title: 'Chrome117',
   },
-  footer: () => ('footer'),
-  header: () => ('header'),
-  useHashRouter: true,
   menu: [ 
     {
       key: 'home',
@@ -19,6 +17,18 @@ export default {
         {
           path: '/',
           element: <Home />,
+        },
+      ],
+    },
+    {
+      key: 'override',
+      title: '篡改请求',
+      icon: 'AndroidOutlined',
+      url: '/override',
+      routes: [
+        {
+          path: '/override',
+          element: <Override />,
         },
       ],
     },
