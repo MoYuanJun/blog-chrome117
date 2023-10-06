@@ -4,7 +4,9 @@ export default () => {
   const [list, setLit] = useState([])
 
   const getData = useCallback(async () => {
-    fetch('http://127.0.0.1:3000/todo-list')
+    fetch('http://127.0.0.1:3000/v3/todo-detail')
+    fetch('http://127.0.0.1:3000/v2/todo-list')
+    fetch('http://127.0.0.1:3000/v2/todo')
   }, [])
 
   useEffect(() => {
