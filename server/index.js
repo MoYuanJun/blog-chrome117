@@ -22,7 +22,7 @@ router.get('/v2/todo-list', (ctx) => {
 // 跨域设置
 app.use(cors({
   maxAge: 5,
-  origin: "http://127.0.0.1:8080",
+  origin: "*",
   credentials: true,
   allowMethods: ['GET', 'POST'],
   allowHeaders: ['Content-Type'],
