@@ -19,6 +19,18 @@ router.get('/v2/todo-list', (ctx) => {
   ];
 });
 
+router.get('/v3/long', async (ctx) => {
+  await new Promise((resolve) => setTimeout(resolve, 1000 * 10))
+  ctx.status = 200;
+  ctx.body = 111111111;
+});
+
+router.get('/v3/short', async (ctx) => {
+  await new Promise((resolve) => setTimeout(resolve, 1000 * 2))
+  ctx.status = 200;
+  ctx.body = 111111111;
+});
+
 // 跨域设置
 app.use(cors({
   maxAge: 5,

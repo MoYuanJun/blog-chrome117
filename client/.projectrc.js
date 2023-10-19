@@ -1,5 +1,6 @@
 import React from 'react';
 import Home from './pages/Home';
+import FetchPriority from './pages/FetchPriority';
 import Override from './pages/Override';
 
 export default {
@@ -29,6 +30,18 @@ export default {
         {
           path: '/override',
           element: <Override />,
+        },
+      ],
+    },
+    {
+      key: 'fetchPriority',
+      title: '请求优先级',
+      icon: 'AndroidOutlined',
+      url: '/fetch-priority',
+      routes: [
+        {
+          path: '/fetch-priority',
+          element: <FetchPriority />,
         },
       ],
     },
